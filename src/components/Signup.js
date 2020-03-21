@@ -23,7 +23,7 @@ class Signup extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(e){
-        debugger
+
         if (e.target.name === 'uid'){
             const uid = e.target.value;
             if (uid.indexOf(' ') > 0){
@@ -60,25 +60,26 @@ class Signup extends React.Component {
             })
         })
         .then(response => response.json())
-        .then(data => {
-            const error = data.error;
-            if (error) {
-                this.setState({
-                    isLoading: false,
-                    errors: { ...error.details }
-                },
-                () => {
-                    this.showErrors();
-                }
-              );
-              return;
-            }
-            this.setState({
-                isLoading: false,
-                redirect: true
-            });
-            return;
-        });
+        // .then(data => {
+        //     const error = data.error;
+        //     if (error) {
+        //         this.setState({
+        //             isLoading: false,
+        //             errors: { ...error.details }
+        //         },
+        //         () => {
+        //             this.showErrors();
+        //         }
+        //       );
+        //       return this.showErrors();
+        //     }
+        //     this.setState({
+        //         isLoading: false,
+        //         redirect: true
+        //     });
+        //     return;
+        // })
+        
     };
 
     showErrors(){
