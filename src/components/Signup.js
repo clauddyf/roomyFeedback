@@ -51,7 +51,8 @@ class Signup extends React.Component {
             headers: {
                 'Content-Type': 'application/json',
                 appid: process.env.REACT_APP_COMETCHAT_APPID,
-                apikey: process.env.REACT_APP_COMETCHAT_APIKEY
+                apikey: process.env.REACT_APP_COMETCHAT_APIKEY,
+                region: process.env.REACT_APP_COMETCHAT_REGION
             },
             body: JSON.stringify({
                 uid,
