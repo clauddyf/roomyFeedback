@@ -77,7 +77,7 @@ class Home extends React.Component {
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Group controlId= 'username'>
                                 <Form.Label>
-                                    Username
+                                    Name
                                 </Form.Label>
                                 <Form.Control 
                                     required
